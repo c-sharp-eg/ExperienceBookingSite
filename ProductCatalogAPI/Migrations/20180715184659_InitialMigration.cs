@@ -7,7 +7,7 @@ namespace ProductCatalogAPI.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateSequence(
-                name: "catalog_brand_hilo",
+                name: "catalog_location_hilo",
                 incrementBy: 10);
 
             migrationBuilder.CreateSequence(
@@ -19,15 +19,15 @@ namespace ProductCatalogAPI.Migrations
                 incrementBy: 10);
 
             migrationBuilder.CreateTable(
-                name: "CatalogBrand",
+                name: "CatalogLocation",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false),
-                    Brand = table.Column<string>(maxLength: 100, nullable: false)
+                    Location = table.Column<string>(maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CatalogBrand", x => x.Id);
+                    table.PrimaryKey("PK_CatalogLocation", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -52,15 +52,15 @@ namespace ProductCatalogAPI.Migrations
                     Price = table.Column<decimal>(nullable: false),
                     PictureUrl = table.Column<string>(nullable: true),
                     CatalogTypeId = table.Column<int>(nullable: false),
-                    CatalogBrandId = table.Column<int>(nullable: false)
+                    CatalogLocationId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Catalog", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Catalog_CatalogBrand_CatalogBrandId",
-                        column: x => x.CatalogBrandId,
-                        principalTable: "CatalogBrand",
+                        name: "FK_Catalog_CatalogLocation_CatalogLocationId",
+                        column: x => x.CatalogLocationId,
+                        principalTable: "CatalogLocation",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -72,9 +72,9 @@ namespace ProductCatalogAPI.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Catalog_CatalogBrandId",
+                name: "IX_Catalog_CatalogLocationId",
                 table: "Catalog",
-                column: "CatalogBrandId");
+                column: "CatalogLocationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Catalog_CatalogTypeId",
@@ -88,13 +88,13 @@ namespace ProductCatalogAPI.Migrations
                 name: "Catalog");
 
             migrationBuilder.DropTable(
-                name: "CatalogBrand");
+                name: "CatalogLocation");
 
             migrationBuilder.DropTable(
                 name: "CatalogType");
 
             migrationBuilder.DropSequence(
-                name: "catalog_brand_hilo");
+                name: "catalog_location_hilo");
 
             migrationBuilder.DropSequence(
                 name: "catalog_hilo");

@@ -17,25 +17,25 @@ namespace ProductCatalogAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.1-rtm-30846")
-                .HasAnnotation("Relational:Sequence:.catalog_brand_hilo", "'catalog_brand_hilo', '', '1', '10', '', '', 'Int64', 'False'")
+                .HasAnnotation("Relational:Sequence:.catalog_location_hilo", "'catalog_location_hilo', '', '1', '10', '', '', 'Int64', 'False'")
                 .HasAnnotation("Relational:Sequence:.catalog_hilo", "'catalog_hilo', '', '1', '10', '', '', 'Int64', 'False'")
                 .HasAnnotation("Relational:Sequence:.catalog_type_hilo", "'catalog_type_hilo', '', '1', '10', '', '', 'Int64', 'False'")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ProductCatalogAPI.Domain.CatalogBrand", b =>
+            modelBuilder.Entity("ProductCatalogAPI.Domain.CatalogLocation", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:HiLoSequenceName", "catalog_brand_hilo")
+                        .HasAnnotation("SqlServer:HiLoSequenceName", "catalog_location_hilo")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.SequenceHiLo);
 
-                    b.Property<string>("Brand")
+                    b.Property<string>("Location")
                         .IsRequired()
                         .HasMaxLength(100);
 
                     b.HasKey("Id");
 
-                    b.ToTable("CatalogBrand");
+                    b.ToTable("CatalogLocation");
                 });
 
             modelBuilder.Entity("ProductCatalogAPI.Domain.CatalogItem", b =>
@@ -45,7 +45,7 @@ namespace ProductCatalogAPI.Migrations
                         .HasAnnotation("SqlServer:HiLoSequenceName", "catalog_hilo")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.SequenceHiLo);
 
-                    b.Property<int>("CatalogBrandId");
+                    b.Property<int>("CatalogLocationId");
 
                     b.Property<int>("CatalogTypeId");
 
@@ -61,7 +61,7 @@ namespace ProductCatalogAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CatalogBrandId");
+                    b.HasIndex("CatalogLocationId");
 
                     b.HasIndex("CatalogTypeId");
 
@@ -86,9 +86,9 @@ namespace ProductCatalogAPI.Migrations
 
             modelBuilder.Entity("ProductCatalogAPI.Domain.CatalogItem", b =>
                 {
-                    b.HasOne("ProductCatalogAPI.Domain.CatalogBrand", "CatalogBrand")
+                    b.HasOne("ProductCatalogAPI.Domain.CatalogLocation", "CatalogLocation")
                         .WithMany()
-                        .HasForeignKey("CatalogBrandId")
+                        .HasForeignKey("CatalogLocationId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ProductCatalogAPI.Domain.CatalogType", "CatalogType")

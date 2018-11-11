@@ -36,9 +36,9 @@ namespace ProductCatalogAPI.Controllers
 
         [HttpGet]
         [Route("[action]")]
-        public async Task<IActionResult> CatalogBrands()
+        public async Task<IActionResult> CatalogLocations()
         {
-            var items = await _catalogContext.CatalogBrands.ToListAsync();
+            var items = await _catalogContext.CatalogLocations.ToListAsync();
             return Ok(items);
         }
 
@@ -108,11 +108,11 @@ namespace ProductCatalogAPI.Controllers
 
         }
 
-        // GET api/Catalog/Items/type/1/brand/null[?pageSize=4&pageIndex=0]
+        // GET api/Catalog/Items/type/1/location/null[?pageSize=4&pageIndex=0]
         [HttpGet]
-        [Route("[action]/type/{catalogTypeId}/brand/{catalogBrandId}")]
+        [Route("[action]/type/{catalogTypeId}/location/{catalogLocationId}")]
         public async Task<IActionResult> Items(int? catalogTypeId, 
-            int? catalogBrandId, 
+            int? catalogLocationId, 
             [FromQuery] int pageSize = 6, 
             [FromQuery] int pageIndex = 0)
         {
@@ -122,9 +122,9 @@ namespace ProductCatalogAPI.Controllers
             {
                 root = root.Where(c => c.CatalogTypeId == catalogTypeId);
             }
-            if (catalogBrandId.HasValue)
+            if (catalogLocationId.HasValue)
             {
-                root = root.Where(c => c.CatalogBrandId == catalogBrandId);
+                root = root.Where(c => c.CatalogLocationId == catalogLocationId);
             }
 
             var totalItems = await root
@@ -149,7 +149,7 @@ namespace ProductCatalogAPI.Controllers
         {
             var item = new CatalogItem
             {
-                CatalogBrandId = product.CatalogBrandId,
+                CatalogLocationId = product.CatalogLocationId,
                 CatalogTypeId = product.CatalogTypeId,
                 Description = product.Description,
                 Name = product.Name,

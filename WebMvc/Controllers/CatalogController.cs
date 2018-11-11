@@ -17,21 +17,21 @@ namespace WebMvc.Controllers
             _catalogSvc = catalogSvc;
 
         public async Task<IActionResult> Index(
-            int? BrandFilterApplied, 
+            int? LocationFilterApplied, 
             int? TypesFilterApplied, int? page)
         {
 
             int itemsPage = 10;
             var catalog = await 
                 _catalogSvc.GetCatalogItems
-                (page ?? 0, itemsPage, BrandFilterApplied, 
+                (page ?? 0, itemsPage, LocationFilterApplied, 
                 TypesFilterApplied);
             var vm = new CatalogIndexViewModel()
             {
                 CatalogItems = catalog.Data,
-                Brands = await _catalogSvc.GetBrands(),
+                Location = await _catalogSvc.GetLocations(),
                 Types = await _catalogSvc.GetTypes(),
-                BrandFilterApplied = BrandFilterApplied ?? 0,
+                LocationFilterApplied = LocationFilterApplied ?? 0,
                 TypesFilterApplied = TypesFilterApplied ?? 0,
                 PaginationInfo = new PaginationInfo()
                 {

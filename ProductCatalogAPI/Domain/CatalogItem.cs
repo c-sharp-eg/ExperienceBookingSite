@@ -14,10 +14,10 @@ namespace ProductCatalogAPI.Domain
 
         public string PictureUrl { get; set; }
         public int CatalogTypeId { get; set; }
-        public int CatalogBrandId { get; set; }
+        public int CatalogLocationId { get; set; }
 
         public virtual CatalogType CatalogType { get; set; }
-        public virtual CatalogBrand CatalogBrand { get; set; }
+        public virtual CatalogLocation CatalogLocation { get; set; }
 
 
     }

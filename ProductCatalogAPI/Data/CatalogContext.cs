@@ -16,14 +16,14 @@ namespace ProductCatalogAPI.Data
         }
 
         public DbSet<CatalogType> CatalogTypes { get; set; }
-        public DbSet<CatalogBrand> CatalogBrands { get; set; }
+        public DbSet<CatalogLocation> CatalogLocations { get; set; }
         public DbSet<CatalogItem> CatalogItems { get; set; }
 
 
         protected override void OnModelCreating
             (ModelBuilder builder)
         {
-            builder.Entity<CatalogBrand>(ConfigureCatalogBrand);
+            builder.Entity<CatalogLocation>(ConfigureCatalogLocation);
             builder.Entity<CatalogType>(ConfigureCatalogType);
             builder.Entity<CatalogItem>(ConfigureCatalogItem);
         }
@@ -43,9 +43,9 @@ namespace ProductCatalogAPI.Data
             builder.Property(c => c.PictureUrl)
                 .IsRequired(false);
 
-            builder.HasOne(c => c.CatalogBrand)
+            builder.HasOne(c => c.CatalogLocation)
                 .WithMany()
-                .HasForeignKey(c => c.CatalogBrandId);
+                .HasForeignKey(c => c.CatalogLocationId);
 
             builder.HasOne(c => c.CatalogType)
                 .WithMany()
@@ -63,14 +63,14 @@ namespace ProductCatalogAPI.Data
                 .HasMaxLength(100);
         }
 
-        private void ConfigureCatalogBrand
-            (EntityTypeBuilder<CatalogBrand> builder)
+        private void ConfigureCatalogLocation
+            (EntityTypeBuilder<CatalogLocation> builder)
         {
-            builder.ToTable("CatalogBrand");
+            builder.ToTable("CatalogLocation");
             builder.Property(c => c.Id)
-                .ForSqlServerUseSequenceHiLo("catalog_brand_hilo")
+                .ForSqlServerUseSequenceHiLo("catalog_location_hilo")
                 .IsRequired();
-            builder.Property(c => c.Brand)
+            builder.Property(c => c.Location)
                 .IsRequired()
                 .HasMaxLength(100);
 

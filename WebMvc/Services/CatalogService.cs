@@ -25,33 +25,33 @@ namespace WebMvc.Services
 
         }
 
-        public async Task<IEnumerable<SelectListItem>> GetBrands()
+        public async Task<IEnumerable<SelectListItem>> GetLocations()
         {
-            var getBrandsUri = ApiPaths.Catalog.GetAllBrands(_remoteServiceBaseUrl);
+            var getLocationsUri = ApiPaths.Catalog.GetAllLocations(_remoteServiceBaseUrl);
 
-            var dataString = await _apiClient.GetStringAsync(getBrandsUri);
+            var dataString = await _apiClient.GetStringAsync(getLocationsUri);
 
             var items = new List<SelectListItem>
             {
                 new SelectListItem() { Value = null, Text = "All", Selected = true }
             };
-            var brands = JArray.Parse(dataString);
+            var locations = JArray.Parse(dataString);
 
-            foreach (var brand in brands.Children<JObject>())
+            foreach (var location in locations.Children<JObject>())
             {
                 items.Add(new SelectListItem()
                 {
-                    Value = brand.Value<string>("id"),
-                    Text = brand.Value<string>("brand")
+                    Value = location.Value<string>("id"),
+                    Text = location.Value<string>("location")
                 });
             }
 
             return items;
         }
 
-        public async Task<Catalog> GetCatalogItems(int page, int take, int? brand, int? type)
+        public async Task<Catalog> GetCatalogItems(int page, int take, int? location, int? type)
         {
-            var allcatalogItemsUri = ApiPaths.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, page, take, brand, type);
+            var allcatalogItemsUri = ApiPaths.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, page, take, location, type);
 
             var dataString = await _apiClient.GetStringAsync(allcatalogItemsUri);
 
@@ -70,13 +70,13 @@ namespace WebMvc.Services
             {
                 new SelectListItem() { Value = null, Text = "All", Selected = true }
             };
-            var brands = JArray.Parse(dataString);
-            foreach (var brand in brands.Children<JObject>())
+            var locations = JArray.Parse(dataString);
+            foreach (var location in locations.Children<JObject>())
             {
                 items.Add(new SelectListItem()
                 {
-                    Value = brand.Value<string>("id"),
-                    Text = brand.Value<string>("type")
+                    Value = location.Value<string>("id"),
+                    Text = location.Value<string>("type")
                 });
             }
             return items;

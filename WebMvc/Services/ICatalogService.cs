@@ -9,8 +9,8 @@ namespace WebMvc.Services
 {
     public interface ICatalogService
     {
-        Task<Catalog> GetCatalogItems(int page, int take, int? brand, int? type);
-        Task<IEnumerable<SelectListItem>> GetBrands();
+        Task<Catalog> GetCatalogItems(int page, int take, int? location, int? type);
+        Task<IEnumerable<SelectListItem>> GetLocations();
         Task<IEnumerable<SelectListItem>> GetTypes();
     }
 }
