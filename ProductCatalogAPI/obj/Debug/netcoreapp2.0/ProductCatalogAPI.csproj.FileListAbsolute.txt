@@ -1,0 +1,36 @@
+G:\OneDrive - Kal Academy\Documents\Materials\Software Bootcamp\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csproj.CoreCompileInputs.cache
+G:\OneDrive - Kal Academy\Documents\Materials\Software Bootcamp\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfoInputs.cache
+G:\OneDrive - Kal Academy\Documents\Materials\Software Bootcamp\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfo.cs
+G:\Github\ShoesOnContainers\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.deps.json
+G:\Github\ShoesOnContainers\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.json
+G:\Github\ShoesOnContainers\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.dev.json
+G:\Github\ShoesOnContainers\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csproj.CoreCompileInputs.cache
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfoInputs.cache
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfo.cs
+G:\Github\ShoesOnContainers\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
+G:\Github\ShoesOnContainers\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csprojAssemblyReference.cache
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.deps.json
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.json
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.dev.json
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csprojAssemblyReference.cache
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csproj.CoreCompileInputs.cache
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfoInputs.cache
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfo.cs
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+C:\Users\shell\Desktop\ShoesOnContainers-master\ShoesOnContainers-master\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.deps.json
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.json
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.runtimeconfig.dev.json
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\bin\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csprojAssemblyReference.cache
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.csproj.CoreCompileInputs.cache
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfoInputs.cache
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.AssemblyInfo.cs
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.dll
+C:\Users\shell\Desktop\ExperienceBookingSite\ExperienceBookingSite\ProductCatalogAPI\obj\Debug\netcoreapp2.0\ProductCatalogAPI.pdb
